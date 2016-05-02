@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     let MAX_PENALTIES = 3
     
     var penalties = 0
+    var timer: NSTimer!
     
     
     override func viewDidLoad() {
@@ -35,13 +36,47 @@ class ViewController: UIViewController {
         penalty3Img.alpha = DIM_ALPHA
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.itemDroppedOnCharacter(_:)), name: "onTargetDropped", object: nil)
+        startTimer()
        
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
         print("Item Dropped On Character")
     }
+    
+    func startTimer(){
+        if timer != nil {
+            timer.invalidate()
+        }
+        timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(ViewController.changeGameState), userInfo: nil, repeats: true)
+    }
+    
+    func changeGameState(){
+      penalties += 1
+        if penalties == 1 {
+            penalty1Img.alpha = OPAQUE
+            penalty2Img.alpha = DIM_ALPHA
+        } else if  penalties == 2 {
+            penalty2Img.alpha = OPAQUE
+            penalty3Img.alpha = DIM_ALPHA
+        } else if penalties >= 3 {
+            penalty3Img.alpha = OPAQUE
+        } else {
+            penalty1Img.alpha = DIM_ALPHA
+            penalty2Img.alpha = DIM_ALPHA
+            penalty3Img.alpha = DIM_ALPHA
+        }
+        
+        if penalties >= MAX_PENALTIES {
+            gameOver()
+        }
+    
+    }
    
+    func gameOver() {
+        timer.invalidate()
+        monsterImg.playDeathAnimation()
+    }
 }
     
 
