@@ -13,6 +13,7 @@
 		BF2FD4CE1CCAB4BE000C0C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2FD4CD1CCAB4BE000C0C2A /* Assets.xcassets */; };
 		BF2FD4D11CCAB4BE000C0C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2FD4CF1CCAB4BE000C0C2A /* LaunchScreen.storyboard */; };
 		BF35A8E21CD6C1BF005A7008 /* DragImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35A8E11CD6C1BF005A7008 /* DragImg.swift */; };
+		BF35A8E41CD6CB2C005A7008 /* monsterImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35A8E31CD6CB2C005A7008 /* monsterImg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF2FD4D01CCAB4BE000C0C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2FD4D21CCAB4BE000C0C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF35A8E11CD6C1BF005A7008 /* DragImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImg.swift; sourceTree = "<group>"; };
+		BF35A8E31CD6CB2C005A7008 /* monsterImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = monsterImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BF2FD4CF1CCAB4BE000C0C2A /* LaunchScreen.storyboard */,
 				BF2FD4D21CCAB4BE000C0C2A /* Info.plist */,
 				BF35A8E11CD6C1BF005A7008 /* DragImg.swift */,
+				BF35A8E31CD6CB2C005A7008 /* monsterImg.swift */,
 			);
 			path = rockMonster;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF35A8E41CD6CB2C005A7008 /* monsterImg.swift in Sources */,
 				BF35A8E21CD6C1BF005A7008 /* DragImg.swift in Sources */,
 				BF2FD4C91CCAB4BE000C0C2A /* ViewController.swift in Sources */,
 				BF2FD4C71CCAB4BE000C0C2A /* AppDelegate.swift in Sources */,
